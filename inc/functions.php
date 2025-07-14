@@ -185,6 +185,36 @@ function statut_emprunt($id_objet, $id_membre)
     $result = mysqli_fetch_assoc($donnee);
     return $result;
 }
-    
 
+function info_membre($id)
+{
+    $sql= "select * from membres where id_membre=$id";
+    $req = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($req);
+    return $result;
+}
+
+function emprunt_corrrespondant($id)
+{
+    $sql = "select emprunt.*, objet.nom_objet from emprunt join objet on emprunt.id_objet=objet.id_objet where emprunt.id_membre=$id";
+    $donnee = mysqli_query(dbconnect(), $sql);
+
+    while ($pub = mysqli_fetch_assoc($donnee)) 
+    {
+        $result[] = $pub;
+
+    }
+    return $result;      
+}
+    
+function retourner_objet($id_objet, $id_membre)
+{
+    $sql = "delete from emprunts where id_membre=$id_membre and id_objet=$id_objet";
+    $req = mysqli_query(dbconnect(), $sql);
+}
+
+function etat_objet($indication)
+{
+    
+}
 ?>

@@ -58,6 +58,9 @@ X-fiche.php :
     -function historique_emprunt pour l'objet 
     -affichage : nom, image, historique
 
-
+XI-fichemembre.php :
+    -function info_membre pour avoir le membre actuel
+    -function emprunt_correspondant pour ses emprunts
 
  
+

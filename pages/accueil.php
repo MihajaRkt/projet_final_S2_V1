@@ -24,7 +24,8 @@ if (isset($_GET['indice'])) {
 
 <body>
 
-
+    <a href="fichemembre.php">Fiche du membre</a>
+    <a href="menu.php">Menu</a>
     <div class="row align-items-center mt-5">
         <div class="col-lg-4 offset-1">
             <h3 class="mb-0">Liste de tous les objets</h3>

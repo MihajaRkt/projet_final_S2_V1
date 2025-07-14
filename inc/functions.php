@@ -10,7 +10,7 @@ function register($nom, $date, $genre,$email, $ville, $mdp)
 
 function login($nom, $mdp)
 {
-    $sql = sprintf("select * from membres where email='$nom' and mdp='$mdp'");
+    $sql ="select * from membres where email='$nom' and mdp='$mdp'";
     $donnee = mysqli_query(dbconnect(), $sql);
     $result = mysqli_fetch_assoc($donnee);
 
@@ -170,5 +170,21 @@ function historique_emprunt($id_objet)
     }
 
 }
+
+function emprunter_objet($id_objet, $id_membre)
+{
+    $sql= "insert into emprunt (id_objet, id_membre, date_emprunt, date_retour) values 
+    ($id_objet, $id_membre, current_date(), current_date()+ 3)";
+    mysqli_query(dbconnect(), $sql);
+}
+
+function statut_emprunt($id_objet, $id_membre)
+{
+    $sql= "select * from emprunt where id_objet= $id_objet and id_membre= $id_membre";
+    $donnee = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($donnee);
+    return $result;
+}
+    
 
 ?>

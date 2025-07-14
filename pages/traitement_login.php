@@ -7,7 +7,7 @@ $email=$_POST['email'];
 
 $log= login($email, $mdp);
 
-$_SESSION['IdM']= $log['Id_membre'];
+$_SESSION['IdM']= $log['id_membre'];
 var_dump($_SESSION['IdM']);
 
 if($log == 0)

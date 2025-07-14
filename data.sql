@@ -111,3 +111,6 @@ insert into emprunt (id_objet, id_membre, date_emprunt, date_retour) values
 (32, 3, '2025-07-08', '2025-07-15'), -- Bruce emprunte un outil de Marie
 (20, 4, '2025-07-09', '2025-07-16'), -- Marie emprunte un objet de John
 (10, 3, '2025-07-10', '2025-07-17'); -- Bruce emprunte un objet de Alice
+
+INSERT INTO images_objet (id_objet, nom_image)
+SELECT id_objet, 'profil.png' FROM objet;

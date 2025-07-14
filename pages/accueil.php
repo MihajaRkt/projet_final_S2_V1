@@ -23,7 +23,11 @@ $emprunt = liste_emprunts();
 
         </div>
 
-        <div class="col-lg-6 offset-1">
+        <div class="col-lg-2 mt-4">
+            <a href="" >Ajouter objet</a>
+        </div>
+
+        <div class="col-lg-4 offset-1">
             <div class="row">
                 <h3 class="mt-4">Filtre</h3>
                 <form action="traitement_filtre.php" method="get">

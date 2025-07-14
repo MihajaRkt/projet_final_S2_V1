@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+header {
+  background-color: #1c1c1c;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #00ffff;
+  object-fit: cover;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #00ffff;
+}
+
+.user-info p {
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.back-btn {
+  padding: 10px 15px;
+  background-color: #00ffff;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background-color: #00cccc;
+}
+
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.media-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.media-description {
+  padding: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.stats {
+  padding: 0 10px 10px 10px;
+  font-size: 13px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}

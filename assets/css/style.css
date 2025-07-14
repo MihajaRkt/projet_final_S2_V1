@@ -1,0 +1,107 @@
+/* body {
+    background-image: url(index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.contener {
+    border: 1px solid black;
+    width: 25%;
+    height: fit-content;
+    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contener input ::placeholder {
+    color: red;
+}
+
+.log{
+text-align: center;
+margin: 4%;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 300%;
+}
+.identifiant {
+    border-radius: 30px;
+    margin-left: 10%;
+    width: 70%;
+    padding: 2%;
+    padding-left:3%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    transition: transform 0.3s ease;
+
+}
+.identifiant:hover {
+    transform: scale(1.1);
+}
+.identifiant::placeholder{
+    padding-left: 3%;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mdp {
+    border-radius: 30px;
+    margin-left: 10%;
+    width: 70%;
+    padding: 2%;
+    padding-left: 3%;
+    margin-top: 3%;
+    transition: transform 0.3s ease;
+}
+.mdp:hover{
+    transform: scale(1.1);
+}
+.mdp::placeholder{
+    padding-left: 3%;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.secondaire {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 100%;
+}
+
+#gras:hover {
+    color: blue;
+}
+
+.submit {
+    border-radius: 30px;
+    margin-left: 15%;
+    width: 70%;
+    padding: 3%;
+    font-size: 110%;
+    margin-top: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+}
+.submit:hover{
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+
+.new {
+    text-align: center;
+}
+
+#sign {
+    font-size: 110%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#sign :hover{
+    text-decoration: underline;
+}
+
+.erreur 
+{
+    color: red;
+    text-align: center;
+}

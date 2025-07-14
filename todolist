@@ -1,0 +1,50 @@
+Version 1
+
+I- Creer base (data.sql) OK
+    -membres
+    -categorie_objet
+    -objet
+    -images_objet
+    -emprunt
+    -insertion des donnees
+
+II-modele.php OK
+    -utilise pour tous les pages 
+
+III-refactoriser : OK 
+    -pages : tous les pages a utiliser
+    -inc : connexion.php, functions.php
+    -assets : bootstrap
+
+IV- index.php  OK
+    -form method(post) action(traitement_login.php) 
+        -input email, mdp, submit
+    -traitement_login.php : OK
+        -function login pour verifier l'input entree par l'utilisateur
+        -header:accueil.php si reussi 
+    -lien vers signup.php pour s'inscrire 
+
+V-signup.php OK
+    -form action(traitement_signup.php) method (post)
+        -input : nom, dtn, email, genre, ville, mdp et submit
+    -traitement_signup.php : OK
+        -function register pour inserer les donnees obtenus dans membres
+        -header:index.php si reussi
+
+VI-accueil.php
+    -appel de liste_objet() pour lister les emprunts
+    -table : affichage
+    -filtre par select : 
+        -function liste_categorie pour afficher les options dans select 
+        -form (traitement_filtre.php) 
+
+VII-view.sql
+    -view concernant les emprunts des objets
+
+VIII-traitement_filtre.php : OK
+    -function objet_filtre selon la selection effectue
+
+IX- filtre.php
+    -Liste objets par categorie
+    -utilisation de objets_filtre
+ 

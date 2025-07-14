@@ -17,6 +17,7 @@ $emprunt = liste_emprunts();
 
 <body>
 
+
     <div class="row align-items-center mt-5">
         <div class="col-lg-4 offset-1">
             <h3 class="mb-0">Liste de tous les objets</h3>

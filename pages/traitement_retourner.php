@@ -4,15 +4,8 @@ if (isset($_GET['etat']))
 {
     $choix = $_GET['filtre'];
 }
+session_start();
+retourner_objet($_SESSION['IdM'], $id_membre);
 
-if ( $choix == 0 )
-{
-    
-}
-else if ( $choix == 1 )
-{
-
-}
-
-
+header('location:fichemembre.php');
 ?>

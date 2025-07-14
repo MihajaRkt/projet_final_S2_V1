@@ -41,6 +41,7 @@ VI-accueil.php
         -appel de changer image ou ajouter image
         -appel de ajouter image
         -appel de ajouter objet
+    -cliquer sur l'objet pour voir fiche : fiche.php
 
 VII-view.sql
     -view concernant les emprunts des objets
@@ -51,6 +52,11 @@ VIII-traitement_filtre.php : OK
 IX- filtre.php
     -Liste objets par categorie
     -utilisation de objets_filtre
+
+X-fiche.php :
+    -function info_objet pour tout ce qui concerne l'objet 
+    -function historique_emprunt pour l'objet 
+    -affichage : nom, image, historique
 
 
 

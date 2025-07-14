@@ -114,3 +114,6 @@ insert into emprunt (id_objet, id_membre, date_emprunt, date_retour) values
 
 INSERT INTO images_objet (id_objet, nom_image)
 SELECT id_objet, 'profil.png' FROM objet;
+
+
+

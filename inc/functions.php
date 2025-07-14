@@ -29,11 +29,15 @@ function current_date()
     $donnee = mysqli_query(dbconnect(), $sql);
     $result = mysqli_fetch_assoc($donnee);
 
+    return $result;
+
 }
 
 function liste_objet($id_objet)
 {
-    $sql= "select * from objet where id_objet != $id_objet";
+    $sql= "select * from objet  
+    join images_objet on objet.id_objet= images_objet.id_objet
+    where objet.id_objet != $id_objet";
     $donnee = mysqli_query(dbconnect(), $sql);
 
     $result = array();
@@ -48,7 +52,9 @@ function liste_objet($id_objet)
 function liste_emprunts()
 {
     $sql= "select * from emprunt 
-    join objet on emprunt.id_objet=objet.id_objet";
+    join objet on emprunt.id_objet=objet.id_objet
+    join images_objet on objet.id_objet= images_objet.id_objet";
+
     $donnee = mysqli_query(dbconnect(), $sql);
 
     $result = array();
@@ -91,6 +97,78 @@ function objets_filtre($choix)
 
     }
     return $result;   
+}
+
+function id_objet_par_nom($nom)
+{
+    $sql= "select id_objet from objet where nom_objet= '$nom'";
+    $donnee = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($donnee);
+
+    return $result;
+}
+
+function changer_image($nom_img, $id_obj)
+{
+    $val = "update images_objet set nom_image= '$nom_img' where id_objet= $id_obj";
+    mysqli_query(dbconnect(), $val);
+}
+
+function ajouter_objet($nom)
+{
+    $sql= "insert into objet(nom_objet, id_categorie, id_membre) values ('$nom', 0, NULL)";
+    mysqli_query(dbconnect(), $sql);
+}
+
+function ajouter_image($nom_img, $id_obj)
+{
+    $val = "insert into images_objet values(nom_image, id_objet) set nom_image= '$nom_img' where id_objet= $id_obj";
+    mysqli_query(dbconnect(), $val);
+}
+
+function verifier_objet($nom_obj)
+{
+    $sql= "select * from objet where nom_objet= '$nom_obj' ";
+    $donnee = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($donnee);
+
+    if($result['nom_objet'] == $nom_obj)
+    {
+        return $result;
+    }
+
+    else
+    {
+        return 0;
+    }
+}
+
+function info_objet ($id_objet)
+{
+    $sql = "select * from objet join images_objet
+    on objet.id_objet=images_objet.id_objet
+    where objet.id_objet=$id_objet";
+    $donnee = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($donnee);
+    return $result;
+}
+
+function historique_emprunt($id_objet)
+{
+    $sql = "select * from emprunt where id_objet=$id_objet";
+    $donnee = mysqli_query(dbconnect(), $sql);
+    $result = mysqli_fetch_assoc($donnee);
+    
+    if($result['id_objet'] != $id_objet)
+    {
+        return NULL;
+    }
+
+    else
+    {
+        return $result;   
+    }
+
 }
 
 ?>

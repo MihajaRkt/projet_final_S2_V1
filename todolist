@@ -37,6 +37,10 @@ VI-accueil.php
     -filtre par select : 
         -function liste_categorie pour afficher les options dans select 
         -form (traitement_filtre.php) 
+    -form(traitement_upload) dans ajouter objet
+        -appel de changer image ou ajouter image
+        -appel de ajouter image
+        -appel de ajouter objet
 
 VII-view.sql
     -view concernant les emprunts des objets
@@ -47,4 +51,7 @@ VIII-traitement_filtre.php : OK
 IX- filtre.php
     -Liste objets par categorie
     -utilisation de objets_filtre
+
+
+
  
